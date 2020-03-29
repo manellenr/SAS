@@ -36,9 +36,6 @@ run;
 %import_texte(nom=examed,var= v1-v12=v48-v59);
 %import_texte(nom=modevie, var= v1-v17=v31-v47);
 
-
-
-
 %macro import_texteorexcel(choix=,nom=,var=);
 /*%IF &choix. %THEN %DO;*/
 %IF (&choix=1) %THEN %DO;
@@ -87,8 +84,6 @@ quit;
 &a.;
 
 call symputx/*sert a r*/
-
-
 
 proc contents data=socdem_a out=t1 ;
 run;
@@ -158,10 +153,6 @@ call symputx ("montant_max",actual) ;
 where _STAT_="max";
 run ;                                  
 %put &=moy ; 
-
-
-
-
 
 
 /*
